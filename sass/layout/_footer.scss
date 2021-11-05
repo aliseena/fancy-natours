@@ -44,6 +44,7 @@
       text-decoration: none;
       display: inline-block;
       transition: all 0.2s;
+      color: $color-primary;
     }
 
     &:hover,
@@ -70,7 +71,7 @@
   &__heart-icon {
     height: 2rem;
     width: 6%;
-    fill: $line-through-color;
+    fill: $color-primary;
   }
 }
 // 3- social medias
