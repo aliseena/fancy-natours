@@ -77,7 +77,6 @@ body {
     animation: 1s moveInLeft ease-out; }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
-        margin-top: 4rem;
         letter-spacing: 1rem;
         font-size: 4.5rem;
         padding-bottom: 1rem; } }
@@ -106,6 +105,7 @@ body {
   @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2.3rem;
+      margin-top: 4rem;
       padding: 0 2.5rem;
       line-height: 3rem; } }
   .heading-secondary:hover {
@@ -612,7 +612,7 @@ body {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #55c57a; }
   .form__input:focus:invalid {
-    border-bottom: 3px solid #ffb900; }
+    border-bottom: 3px solid #ff7730; }
   .form__input::-webkit-input-placeholder {
     color: #999; }
 
@@ -773,13 +773,13 @@ body {
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/hero.jpg); } }
   @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
     .header {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-      height: 95vh; } }
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      height: 100vh; } }
   @media only screen and (max-width: 37.5em) {
     .header {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 85%);
-      clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%); } }
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%); } }
   .header__text-box {
     position: absolute;
     top: 40%;
