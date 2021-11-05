@@ -1,0 +1,43 @@
+// ================================ //
+/*
+     Template name: Natours - Responsive Boostrap 5 One Page Template
+     Template URL: fancy-natours.netlify.app/
+     Description: Natours - Responsive Boostrap 5 One Page Template
+     Author: Ali
+     Author URL: themeforest.net/user/alihaidari210
+     Version: 1.0
+*/
+
+// =============================== //
+// folder orders
+// ================================ //
+// 1- abstract
+// 2- base
+// 3- components
+// 4- layout
+// 5- pages
+// ================================ //
+// 1- abstract
+@import './abstract/variables';
+@import './abstract/utilities';
+@import './abstract/mixins';
+// 2- base
+@import './base/base';
+@import './base/typography';
+@import './base/animations';
+// 3-components
+@import './components/button';
+@import './components/composition';
+@import './components/feature-box';
+@import './components/card';
+@import './components/story';
+@import './components/bg-video';
+@import './components/form';
+@import './components/modal';
+
+// 4- layout
+@import 'layout/nav';
+@import './layout/header';
+@import './layout/footer';
+// 5- pages
+@import './pages/home';

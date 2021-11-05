@@ -1,0 +1,41 @@
+// ===================== //
+// * REMEMBER 1rem = 10px as I have defined it in root element html *
+// * as I write media queries, everyting will be shrinked according to the base font-size which is html *
+
+// 1- html + media query
+// 2- body element
+
+// ===================== //
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// 1- html + media query
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 9/10 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px -> 8/10 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 12/16 = 75%
+  }
+}
+// 2- body element
+body {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden !important;
+  color: $color-grey-dark;
+  position: relative;
+}

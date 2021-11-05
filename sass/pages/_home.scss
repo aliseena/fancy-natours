@@ -1,0 +1,122 @@
+// ============ home sections ============== //
+
+// 1- section about
+// 2- section features
+// 3- section tours
+// 4- section stories
+// 5- section book
+// 6- selection background
+
+// ========================================= //
+// 1- section about
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 20rem 0;
+  margin-top: -20vh;
+}
+// 2- section features
+.section-features {
+  padding: 18rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../images/f1-small.jpg);
+  // Photo by Tobi from Pexels
+  @media only screen and (min-resolution: 192dpi) and (min-width: 35.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 35.5em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../images/f1.jpg);
+  }
+  background-size: cover;
+  transform: skewY(-4deg);
+  margin-top: -10rem;
+
+  & > * {
+    transform: skewY(4deg);
+  }
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+@include respond(tab-port) {
+  .feature-row > :not(:last-child) {
+    margin-bottom: 4rem !important;
+  }
+}
+// 3- section tours
+.section-tours {
+  background-color: $color-grey-light-1;
+  padding: 24rem 0 10rem 0;
+  margin-top: -10rem;
+  @include respond(tab-port) {
+    padding: 18rem 0 5rem 0;
+  }
+}
+// 4- section stories
+.section-stories {
+  position: relative;
+  padding: 8rem 0;
+}
+// 5- section book
+.section-book {
+  padding: 7rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../images/b1-1x.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 60%,
+        transparent 60%
+      ),
+      url(../images/b1-large.jpg);
+  }
+  @include respond(phone) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../images/b1-1x.jpg);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 2rem 3rem;
+    @include respond(tab-land) {
+      width: 60%;
+    }
+    @include respond(phone) {
+      width: 100%;
+      padding-bottom: 5rem;
+    }
+  }
+}
+
+// 6- selection background
+::selection {
+  background-color: rgba($color-primary-light, 0.4);
+}

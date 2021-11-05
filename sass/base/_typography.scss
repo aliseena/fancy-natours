@@ -1,0 +1,93 @@
+// =========== typography ========== //
+// 1- heading-primary
+// 2- heading-secondary
+// 3- heading-t  or terriary
+// ================================== //
+
+// 1- heading-primary
+.heading-primary {
+  overflow: hidden;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  @supports (-webkit-backface-visibility: hidden) or
+    (backface-visibility: hidden) {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.8rem;
+    animation: 1s moveInLeft ease-out;
+    @include respond(phone) {
+      margin-top: 4rem;
+      letter-spacing: 1rem;
+      font-size: 4.5rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    animation: moveInRight 1s ease-out;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+// 2- heading-secondary
+.heading-secondary {
+  font-size: 3.7rem;
+  font-weight: 500;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+  @include respond(tab-port) {
+    font-size: 2.4rem;
+  }
+  @include respond(phone) {
+    font-size: 2.3rem;
+    padding: 0 2.5rem;
+    line-height: 3rem;
+  }
+  &:hover {
+    transform: scale(1.05) translateY(-6px);
+    cursor: pointer;
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+  &:active,
+  &:focus {
+    transform: scale(1) translateY(6px);
+  }
+}
+
+// 3- heading-t  or terriary
+.heading-t {
+  font-weight: 300;
+  font-size: 2.2rem;
+  color: $color-grey-dark-4;
+  margin-bottom: 1rem;
+}
+
+.display-10 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: $color-grey-dark-2 !important;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,35 @@
+// ============ modal ============ //
+// 1- modal
+// 2- modal header
+// 3- modal content
+// ============================== //
+// 1- modal
+.modal {
+  // Browser support
+  @supports (
+    backdrop-filter: blur(3px) or
+      (
+        -webkit-backdrop-filter: blur(3px),
+      )
+  ) {
+    backdrop-filter: blur(3px);
+    background: rgba($color-primary-super-light, 0.3);
+  }
+}
+
+// 2- modal header
+.modal-header {
+  border-bottom: none !important;
+}
+.btn-close {
+  padding: 1rem 1rem !important;
+  font-size: 1.5rem !important;
+  margin: -0.5rem -0.5rem -0.5rem auto;
+}
+// 3- modal content
+.modal-content {
+  top: 10rem;
+}
+.modal-body {
+  height: 100%;
+}

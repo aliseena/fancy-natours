@@ -1,0 +1,70 @@
+// ========== feature box ========= //
+
+// 1- feature box
+// 2- feature icon
+
+// ================================ //
+
+// 1- feature box
+.feature-box {
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  transition: transform 0.3s;
+  height: 32rem;
+
+  // 2- feature icon
+  &__icon {
+    font-size: 5.5rem;
+    // margin-bottom: 1rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    color: transparent;
+    @include respond(tab-port) {
+      font-size: 4.5rem;
+      margin-bottom: 0;
+      padding: 1rem 1rem 0 1rem;
+    }
+    svg {
+      height: 4rem;
+      fill: $color-primary;
+      width: 50%;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1.5rem) scale(1.04);
+  }
+  &:hover &__border {
+    width: 6rem;
+  }
+  &__border {
+    height: 2px;
+    width: 4rem;
+    background-color: $color-primary;
+    margin: 15px auto;
+    transition: all 0.5s;
+  }
+
+  @include respond(tab-port) {
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+  @include respond(tab-land) {
+    &:not(:last-of-type) {
+      margin-bottom: 4rem !important;
+    }
+  }
+  @include respond(phone) {
+    max-width: 33rem;
+    height: 25rem;
+  }
+}
