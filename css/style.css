@@ -341,7 +341,7 @@ body {
   @media only screen and (max-width: 37.5em) {
     .feature-box {
       max-width: 33rem;
-      height: 25rem; } }
+      height: 31rem; } }
 
 .card {
   perspective: 150rem;
